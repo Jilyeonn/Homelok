@@ -1,0 +1,68 @@
+<?php
+    include("index.php");
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <title> Homelok </title>
+    </head>
+    <body>
+        <div class = "navbar">
+        <p class = "navtitle"> <a href="index.html"> Homelok</a></p>
+        <a href="home.html" class="page">Home</a> 
+        <a href="about.html" class="page">About</a> 
+        </div>
+        <div class="container">
+            <!--search bar and slideshow-->
+            <div class="search-container">
+                <p class="headline"> Homelok </p>
+                <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit" class="searchbtn">Search</button>
+                </form>
+              </div>
+              <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="images/winterbanner.jpg" alt="Image 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/1stanniv.jpg" alt="Image 2">
+                </div>
+                <div class="indicators">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container-1">
+        <!--Item List tags-->
+        <div class="item-list">
+            <div class="item">
+                <img src="images/cctv1.jpg" alt="Item 1">
+                <h3>CCTV Ver.1</h3>
+                <p class="price">PHP 1500.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="images/cctv1.jpg" alt="Item 2">
+                <h3>CCTV Ver.1</h3>
+                <p class="price">PHP 1500.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="images/cctv1.jpg" alt="Item 3">
+                <h3>CCTV Ver.1</h3>
+                <p class="price">PHP 1500.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="images/cctv1.jpg" alt="Item 4">
+                <h3>CCTV Ver.1</h3>
+                <p class="price">PHP 1500.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+  
+.navbar {
+    width: 100%;
+    height: 11%;
+    align-items: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 15px;
+    position: fixed;
+    color:black;
+    background: transparent;
+    top: 0;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+  
+  .navtitle{
+    float:left;
+    margin-left: 15px;
+    margin-top: 25px;
+    font-size: 20px;
+  }
+  
+  .nav-logo {
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 45px;
+    height: 52px;
+    float: left;
+  }
+  
+  .page {
+    padding: 25px;
+    margin-right: 25px;
+    float: right;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .container{
+    background-image: url(../images/login.png);
+      height:96.5vh;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      overflow: hidden;
+      margin: 0;
+      padding-top: 20px;
+  }
+.email{
+    padding-top: 20px;
+    color: black;
+}
+.login{
+    width: 500px;
+    height: 450px;
+    margin-right: 250px;
+    margin-top: 50px;
+}
+
+input[type=text], input[type=password]{
+    width: 80%;
+    height: 30px;
+    padding: 10px;
+    margin: 0 20px 20px 50px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+}
+.button{
+    background-color: white;
+    color:black;
+    padding: 15px;
+    width: 75px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 200px;
+    font-size: 12px;
+}
+
+p{
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+.signup{
+    color:gray;
+    text-decoration: none;
+}
+
+.signup1{
+    width: 500px;
+    height: 450px;
+    padding-left: 1200px;
+    color: black;
+    background-color:black;
+}
+.heading{
+    margin-left: 700px;
+    text-align: center;
+    color: black;
+}
+
+h1{
+    padding-top: 45px;
+    text-align: center;
+    color: black;
+}
+
+h2{
+    text-align: center;
+    color:black;
+}
+
+h3{
+    margin-left: 50px;
+    color:black;
+}
