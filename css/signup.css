@@ -3,67 +3,88 @@ body{
     padding:0;
 }
 
-h1{
-    margin-top: 95px;
-    padding-top: 20px;
-    text-align: center;
-    color: red;
+a{
+    text-decoration: none;
+    color: white;
 }
-h2{
-    text-align: center;
-    color:red;
-}
-h3{
-    margin-left: 22px;
-    color:red;
-}
-
+  
 .navbar {
     width: 100%;
     height: 11%;
     align-items: center;
     font-family: 'Russo One', sans-serif;
-    background-color: black;
     font-size: 15px;
     position: fixed;
+    color:black;
+    background: transparent;
     top: 0;
     z-index: 1;
-  }
-
-.navtitle{
-  float:left;
-  margin-left: 15px;
-  font-size: 20px;
-  color: red;
+    transition: background-color 0.3s ease;
 }
 
-.navtitle a {
-    color: red;
+.navbar.scrolled {
+    height: 65px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled a{
+  color: black;
+}
+  
+  .navtitle{
+    float:left;
+    margin-left: 15px;
+    margin-top: 25px;
+    font-size: 20px;
+  }
+
+  .navtitle.scrolled a {
+    color: black;
     text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .nav-logo {
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 45px;
+    height: 52px;
+    float: left;
   }
   
   .page {
-    margin: 23px 0 0 25px;
-    float: left;
-    color: white;
+    padding: 25px;
+    margin-right: 25px;
+    float: right;
     text-decoration: none;
     font-size: 15px;
   }
-
+  
+  .container{
+    background-image: url(../images/signup.png);
+      height:150vh;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      overflow: hidden;
+      margin: 0;
+      padding-top: 20px;
+  }
 .signup{
     width: 700px;
     height: 770px;
-    margin-left: 250px;
-    margin-right: 250px;
-    background-color: black;
+    margin-left: 95vh;
     border-radius: 20px;
 }
 
 input[type=text], input[type=password]{
-    width: 90%;
+    width: 60%;
     height: 30px;
     padding: 10px;
-    margin: 0 20px 20px 20px;
+    margin: 0 0 20px 125px;
     background: white;
     border: none;
     border-radius: 10px;
@@ -76,22 +97,45 @@ input[type=text], input[type=password]{
     width: 75px;
     border: none;
     border-radius: 10px;
-    margin-left: 320px;
+    margin-left: 50vh;
     font-size: 12px;
 }
 
 p{
     color: white;
-    text-align: center;
+    margin-left: 37vh;
     margin-top: 20px;
 }
-
-a{
+.login{
+    color:gray;
     text-decoration: none;
-    color:red;
 }
 
-.container{
-    margin-top: 50px;
-    margin-bottom: 50px;
+.login1{
+    width: 500px;
+    height: 450px;
+    padding-left: 1200px;
+    color: black;
+    background-color:black;
+}
+.heading{
+    margin-left: 700px;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    padding-top: 45px;
+    margin-left: 50vh;
+    color: white;
+}
+
+h2{
+    margin-left: 50vh;
+    color:white;
+}
+
+h3{
+    margin-left: 125px;
+    color:white;
 }
