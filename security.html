@@ -7,39 +7,51 @@
 <body>
     <div class = "navbar" id="navbar">
         <img src="images/logo.png" class="nav-logo"> 
-        <a href="index.html" class = "navtitle"> Homelok</a>
+        <a href="index.html" class = "navtitle"> Homelok</a>\
+        <button id="open-cart" class="cart-button">🛒 View Cart</button>
         <a href="about.html" class="page">About</a>
         <a href="home.html" class="page">Home</a>  
+        
     </div>
     <div class="container">
         <div class="item-list">
-            <div class="item" id="img1">
-             <img src="images/securityleverhandle.jpeg" alt="Item 2" >
+            <div class="item" id="img1" data-id="1" data-name="Security Lever handle" data-price="2200" data-image="images/securityleverhandle.jpeg">
+             <img src="images/securityleverhandle.jpeg"  >
                 <h3>Security Lever handle</h3>
                 <p class="price">PHP 2,200.00</p>
                 <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <div class="item">
-                    <img src="images/uboltprowifismartlock.jpeg" alt="Item 2">
+                <div class="item" data-id="2" data-name="U-Bolt Pro WiFi Smart Lock" data-price="1600" data-image="images/uboltprowifismartlock.jpeg" >
+                    <img src="images/uboltprowifismartlock.jpeg" >
                     <h3>U-Bolt Pro WiFi Smart Lock</h3>
                     <p class="price">PHP 1,600.00</p>
                 <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <div class="item">
-                    <img src="images/uboltprowifismartlock.jpeg" alt="Item 2">
+                <div class="item" data-id="3" data-name="U-Bolt Pro WiFi Smart Lock" data-price="1600" data-image="images/uboltprowifismartlock.jpeg" >
+                    <img src="images/uboltprowifismartlock.jpeg" >
                     <h3>U-Bolt Pro WiFi Smart Lock</h3>
                     <p class="price">PHP 1,600.00</p>
                 <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <div class="item">
-                    <img src="images/uboltprowifismartlock.jpeg" alt="Item 2">
-                    <h3>U-Bolt Pro WiFi Smart Lock</h3>
-                    <p class="price">PHP 1,600.00</p>
-                <button class="add-to-cart">Add to Cart</button>
-                </div>
+               
             </div>
+            
     </div>
-    <script src="css/about.js">
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+            <div class="cart-summary">
+                <p>Total: <span id="total-price">0.00</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="security.js">
+  
     </script>
 </body>
+
 </html>
