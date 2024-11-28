@@ -1,10 +1,8 @@
-<?php
-    include("index.php");
-?>
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="icon" type="img/png" href="images/logo.png" src="images/logo.png">
         <title> Homelok </title>
     </head>
     <body>
@@ -44,10 +42,21 @@
                 <h3>Security Appliances</h3>
             </div>
             <div class="item">
-                <img src="images/homeappliance.jpg" alt="Item 2">
+                <a href="homeappliances.html"><img src="images/homeappliance.jpg" alt="Item 2"></a>
                 <h3>Home Appliances</h3>
             </div>
         </div>
+
+        <!-- Pop up for signin/login -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close-btn" id="closeModalBtn">&times;</span>
+              <h2>Welcome!</h2>
+              <p>Would you like to sign up or log in?</p>
+              <button class="modal-btn" id="signUpBtn">Sign Up</button>
+              <button class="modal-btn" id="logInBtn">Log In</button>
+            </div>
+          </div>
         <script src="script.js"></script>
     </body>
 </html>

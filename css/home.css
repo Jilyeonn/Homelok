@@ -108,7 +108,7 @@ input[type=text] {
 .slideshow-container {
   position: relative;
   overflow: hidden;
-  background-color: #d23622;
+  border-width: 4px;
   margin-top: 20px;
   width: auto;
   height: auto; 
@@ -123,7 +123,6 @@ input[type=text] {
 .slide img {
   width: 45%;
   border-radius: 8px;
-  background-color:gray;
   padding:10px;
 }
 
@@ -224,6 +223,55 @@ input[type=text] {
 
 .add-to-cart:hover {
   background-color: #218838;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+  text-align: center;
+}
+
+.modal-content p{
+  font-size: 16px;
+}
+
+.modal-content h2{
+  font-size: 20px
+}
+
+.close-btn {
+  color: red;
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+}
+
+.modal-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 8px;
+}
+
+.modal-btn:hover {
+  background-color: #ddd;
 }
 
 /* Media Queries */

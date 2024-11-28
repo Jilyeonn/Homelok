@@ -87,6 +87,7 @@ a{
   
   .item img {
     max-width: 80%;
+
     border-radius: 8px;
   }
   
@@ -243,37 +244,10 @@ a{
 .delete-item:hover {
   background-color: #cc0000;
 }
-.checkout-btn{
+.checkoutbtn{
   padding:15px;
   font-size: 12px;
   border: none;
   background-color: lightblue;
   border-radius: 8px;
-  align-items: baseline;
-}
-
-.quantity-controls {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 5px;
-}
-
-.quantity-controls button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 5px 8px;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 5px;
-}
-
-.quantity-controls button:hover {
-  background-color: #0056b3;
-}
-
-.item-quantity {
-  font-weight: bold;
-  margin: 0 5px;
 }

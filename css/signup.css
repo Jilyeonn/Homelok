@@ -64,7 +64,7 @@ a{
   
   .container{
     background-image: url(../images/signup.png);
-      height:150vh;
+      height:96.5vh;
       background-position: center;
       background-size: cover;
       background-attachment: fixed;
@@ -80,11 +80,11 @@ a{
     border-radius: 20px;
 }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=email]{
     width: 60%;
     height: 30px;
     padding: 10px;
-    margin: 0 0 20px 125px;
+    margin: 0 0 10px 125px;
     background: white;
     border: none;
     border-radius: 10px;
@@ -138,4 +138,20 @@ h2{
 h3{
     margin-left: 125px;
     color:white;
+}
+
+.messageDiv{
+    display:none;
+    background-color: lightblue;
+    color: black;
+    padding: 10px 20px;
+    margin-left: 240px;
+    margin-top: 125px;
+    width: 150px;
+    border-radius: 5px;
+    font-size:1rem;
+    opacity:0;
+    animation: fadeOut 7s forwards;
+    position:fixed;
+    text-align: center;
 }

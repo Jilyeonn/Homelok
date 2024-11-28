@@ -1,3 +1,5 @@
+// slideshow for the ads
+
 let slideIndex = 0;
 
 function showSlides() {
@@ -21,4 +23,30 @@ function showSlides() {
 
 showSlides();
 
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const signUpBtn = document.getElementById('signUpBtn');
+const logInBtn = document.getElementById('logInBtn');
 
+// shows the modal when website is clicked
+window.addEventListener('load', () => {
+  modal.style.display = 'block';
+});
+
+closeModalBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+signUpBtn.addEventListener('click', () => {
+  window.location.href="signup.html";
+});
+
+logInBtn.addEventListener('click', () => {
+  window.location.href="login.html";
+});

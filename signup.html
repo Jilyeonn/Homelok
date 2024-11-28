@@ -1,45 +1,39 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/signup.css">
-        <title>
-            Homelok
-        </title>
-    </head>
-    <body>
-        
-        <div class = "navbar" id="navbar">
-            <img src="images/logo.png" class="nav-logo"> 
-            <a href="index.html" class = "navtitle"> Homelok</a>
-            <a href="about.html" class="page">About</a>
-            <a href="home.html" class="page">Home</a>  
-            </div>
-        <div class="container">
-        <div class="signup">
-            <form action="home.html" method="post">
-                <h1> Signup </h1>
-                <h2> Welcome! </h2>
-                <h3> Firstname </h3>
-                <input type="text" id="fname"name="fname" required placeholder="Firstname">
-                <h3> Lastname </h3>
-                <input type="text" id="lname "name="lname" required placeholder="Lastname">
-                <h3 class="email"> Email </h3>
-                <input type="text" id="email" name="email" required placeholder="Email">
-                <h3> Password </h3>
-                <input type="text" id="password "name="password" required placeholder="Password">
-                <h3> Re-type password </h3>
-                <input type="text" id="password2"name="password2" required placeholder="Re-type password">
-            
- 
-                <input type="submit" value="Signup" class="button" href="index.html"> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Homelok</title>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <img src="images/logo.png" class="nav-logo">
+        <a href="index.html" class="navtitle">Homelok</a>
+        <a href="about.html" class="page">About</a>
+        <a href="home.html" class="page">Home</a>
+    </div>
 
-                <p> Already have an account? Click here to <a href="login.html" class="login"> Login</a></p>
+    <div class="container">
+        <div class="signup">
+            <form method="post">
+                <div class="messageDiv"id="signupMessage"></div>
+                <h1>Signup</h1>
+                <h2>Welcome!</h2>
+                <h3>Username</h3>
+                <input type="text" id="username" name="username" required placeholder="Username">
+                <h3>Email</h3>
+                <input type="email" id="email" name="email" required placeholder="Email">
+                <h3>Password</h3>
+                <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+                <input type="submit" id="submit" value="Sign Up" class="button">
+
+                <p>Already have an account? Click here to <a href="login.html" class="login">Login</a></p>
             </form>
         </div>
-        </div>
-        <script src="css/about.js">
-            
-        </script>
-    </body>
+    </div>
+
+    <script type="module" src="signup.js"></script> <!-- Link to your JS file -->
+</body>
 </html>

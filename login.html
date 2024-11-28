@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="icon" type="img/png" href="images/logo.png" src="images/logo.png">
         <title>
             Homelok
         </title>
@@ -15,17 +16,18 @@
         </div>
         <div class="container">
         <div class="login">
-            <form onsubmit ="runCode(event)" action="rand.php" method="post">
+            <form  method="post">
+                <div class="messageDiv"id="signupMessage"></div>
                 <h1> Login</h1> 
                 <h2> Welcome Back! </h2>
                 <h3> Email </h3>
-                <input type="text" name="email" required placeholder="Email">
+                <input type="text" id="email" name="email" required placeholder="Email">
                 <h3> Password </h3>
-                <input type="text" name="password" required placeholder="Password"><br><br>
-                <input type="submit" value="Login" class="button">
+                <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+                <input type="submit" id="submit" value="Login" class="button">
                 <p> Don't have an account yet? Click here to <a href="signup.html" class="signup"> Signup </a></p>
             </form>
         </div>
-        <script src="css/about.js"></script>
+        <script type="module" src="login.js" defer></script>
     </body>
 </html>

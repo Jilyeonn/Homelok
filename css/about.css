@@ -148,3 +148,84 @@ img{
 .cta-button:hover {
   background: #0056b3;
 }
+
+.mttheader{
+  color: black;
+  font-size: 50px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+
+.members {
+  margin: 50px auto auto;
+  padding: 25px;
+  background-color: black;
+  width: 90%;
+  height: 10cm;
+  border-radius: 10px;
+}
+    
+.members Table {
+  margin: 10px 10px 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.AA, .DD, .BB, .CC, .EE{
+  background-size: cover;
+  display: inline-block;
+  height: 100px; 
+  width: 100px;
+  border-radius: 50px;
+  margin-left: 55px;
+  color: white;
+}
+.FF{
+  background-size: cover;
+  display: inline-block;
+  height: 100px; 
+  width: 100px;
+  color: white;
+  border-radius: 50px;
+  margin-left: 40px;
+  margin-top: 40px; 
+  
+}
+.AA {
+  background-image: url(../images/adman.jpg);
+}
+
+.BB {
+  background-image: url(../images/dhianne.jpeg);
+}
+
+.CC {
+  background-image: url(../images/jess.jpg);
+}
+
+.DD {
+  background-image: url(../images/richie.jpg);
+}
+
+.EE {
+  background-image: url(../images/pic.png);
+}
+
+.FF{
+  margin-left: 385px;
+  background-image: url(../images/sultan.jpg);
+}
+
+.FF p{
+  margin-left: 15px;
+  margin-top: 120px;
+  font-family: 'Poppins', sans-serif; 
+ }
+
+td p{
+  width: 160px;
+  margin-top: 125px;
+  margin-left: 10px;
+
+}

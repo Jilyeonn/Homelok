@@ -1,4 +1,4 @@
-// script.js
+
 
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const openCartButton = document.getElementById('open-cart');
@@ -32,7 +32,7 @@ addToCartButtons.forEach(button => {
 
 // Update cart display
 function updateCart() {
-    cartItemsContainer.innerHTML = '';
+    cartItemsContainer.innerHTML = ''; // Clear previous content
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
@@ -45,46 +45,86 @@ function updateCart() {
                     <img src="${item.image}" alt="${item.name}" class="cart-item-image" />
                     <div class="cart-item-text">
                         <p><strong>${item.name}</strong></p>
-                        <p>₱${item.price.toFixed(2)} x ${item.quantity}</p>
+                        <p>₱${item.price.toFixed(2)} x <span class="item-quantity">${item.quantity}</span></p>
+                        <div class="quantity-controls">
+                            <button class="decrement-qty" data-index="${index}">-</button>
+                            <button class="increment-qty" data-index="${index}">+</button>
+                        </div>
                     </div>
                 </div>
                 <button class="delete-item" data-index="${index}">✖</button>
             `;
             cartItemsContainer.appendChild(itemElement);
         });
+
+        const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+        totalPriceElement.textContent = `₱${totalPrice.toFixed(2)}`;
+
+        // Add the checkout button
+        const checkoutButton = document.createElement('button');
+        checkoutButton.classList.add('checkout-btn');
+        checkoutButton.textContent = 'Proceed to Checkout';
+        checkoutButton.addEventListener('click', handleCheckout);
+        cartItemsContainer.appendChild(checkoutButton);
     }
 
-    // Add event listeners to delete buttons
-    const deleteButtons = document.querySelectorAll('.delete-item');
-    deleteButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
+    // Update total price
+   
+
+    // Attach event listeners for increment/decrement and delete buttons
+    attachEventListeners();
+}
+
+function attachEventListeners() {
+    // Delete buttons
+    document.querySelectorAll('.delete-item').forEach(button => {
+        button.addEventListener('click', event => {
             const index = event.target.getAttribute('data-index');
             deleteCartItem(index);
         });
     });
 
-    // Update total price with ₱ symbol
-    const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-    totalPriceElement.textContent = `₱${totalPrice.toFixed(2)}`;
+    // Increment buttons
+    document.querySelectorAll('.increment-qty').forEach(button => {
+        button.addEventListener('click', event => {
+            const index = event.target.getAttribute('data-index');
+            cart[index].quantity++;
+            updateCart();
+        });
+    });
+
+    // Decrement buttons
+    document.querySelectorAll('.decrement-qty').forEach(button => {
+        button.addEventListener('click', event => {
+            const index = event.target.getAttribute('data-index');
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                deleteCartItem(index);
+            }
+            updateCart();
+        });
+    });
 }
 
-// Delete cart item
-function deleteCartItem(index) {
-    cart.splice(index, 1);
-    updateCart();
+function handleCheckout() {
+    localStorage.setItem('cart', JSON.stringify(cart)); // Save cart to localStorage
+    window.location.href = 'checkout.html'; // Redirect to checkout page
 }
 
-// Show modal when "View Cart" button is clicked
+
+
+
+
 openCartButton.addEventListener('click', () => {
     modal.style.display = 'flex';
 });
 
-// Close modal
 closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-// Close modal when clicking outside of it
+
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.style.display = 'none';
