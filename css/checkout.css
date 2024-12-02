@@ -3,7 +3,71 @@ body {
     padding: 20px;
 }
 
-  
+/* NAVBAR CSS BEGIN */
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  width: 100%;
+  height: 11%;
+  align-items: center;
+  font-family: 'Russo One', sans-serif;
+  font-size: 15px;
+  position: fixed;
+  color:black;
+  background: transparent;
+  top: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  height: 65px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled a{
+color: black;
+}
+
+.navtitle{
+  float:left;
+  margin-left: 15px;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.navtitle.scrolled a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.nav-logo {
+  margin-top: 5px;
+  margin-left: 25px;
+  width: 45px;
+  height: 52px;
+  float: left;
+}
+
+.page {
+  padding: 25px;
+  margin-right: 25px;
+  float: right;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/*NAVBAR CSS END */
+
+h1{
+  margin-top: 80px;
+}
   .cart-item {
     display: flex;
     justify-content: space-between;
